@@ -1,0 +1,47 @@
+\begin{center}
+    {\huge\textbf{\name}} \\ \vspace{0.2em}
+    \currenttitle{} \vline{} \employer{} \\ \vspace{0.5em}
+
+    % Email
+    \href{mailto:\email}{
+        \begin{tikzpicture}[inner sep=0.2em, text depth=0.2em]
+            \node[] (icon) at (0,0) {\includegraphics[height=11pt]{icons/email.png}};
+            \node[anchor=west, accentcolour] (label) at (icon.east) {\email};
+        \end{tikzpicture}
+    }
+    % Phone
+    \href{tel:\phonenumber}{
+        \begin{tikzpicture}[inner sep=0.2em, text depth=0.2em]
+            \node[] (icon) at (0,0) {\includegraphics[height=11pt]{icons/phone.png}};
+            \node[anchor=west, accentcolour] (label) at (icon.east) {\phonenumber};
+        \end{tikzpicture}
+    }
+    % LinkedIn
+    \href{\linkedin}{
+        \begin{tikzpicture}[inner sep=0.2em, text depth=0.2em]
+            \node[] (icon) at (0,0) {\includegraphics[height=11pt]{icons/linkedin.png}};
+            \node[anchor=west, accentcolour] (label) at (icon.east) {\linkedinlabel};
+        \end{tikzpicture}
+    }
+%    % Personal website
+%    \href{\personalwebsite}{
+%        \begin{tikzpicture}[inner sep=0.2em, text depth=0.2em]
+%            \node[] (icon) at (0,0) {\includegraphics[height=11pt]{icons/website.png}};
+%            \node[anchor=west, accentcolour] (label) at (icon.east) {\websitelabel};
+%        \end{tikzpicture}
+%    }
+    % Google Scholar
+    \href{\googlescholar}{
+        \begin{tikzpicture}[inner sep=0.2em, text depth=0.2em]
+            \node[] (icon) at (0,0) {\includegraphics[height=11pt]{icons/googlescholar-bw.png}};
+            \node[anchor=west, accentcolour] (label) at (icon.east) {\googlescholarlabel};
+        \end{tikzpicture}
+    }
+%    % GitHub
+%    \href{\github}{
+%        \begin{tikzpicture}[inner sep=0.2em, text depth=0.2em]
+%            \node[] (icon) at (0,0) {\includegraphics[height=11pt]{icons/github.png}};
+%            \node[anchor=west, accentcolour] (label) at (icon.east) {\githublabel};
+%        \end{tikzpicture}
+%    }
+\end{center}
