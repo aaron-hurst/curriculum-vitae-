@@ -14,6 +14,8 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage[defaultlines=2,all]{nowidow}
+\usepackage[skip=0em]{parskip}
+\usepackage{multicol}
 \usepackage[hidelinks]{hyperref}
 
 \usetikzlibrary{backgrounds}  % allows framed option for tikzpicture
@@ -27,24 +29,24 @@
 %%%%%%%%%%%%%%%%%%%%
 % Section headers
 %%%%%%%%%%%%%%%%%%%%
-\renewcommand{\section}[1]{\vspace{1.5em}\noindent
+\renewcommand{\section}[1]{\vspace{1.7em}
 \begin{tikzpicture}[remember picture,text depth=0.25em]
-    \node[inner sep=0] (title) {\noindent \Large \textbf{#1}};
+    \node[inner sep=0] (title) {\Large \textbf{#1}};
     \draw[thick, accentcolour] (title.east)+(0.5em,0) -- (title -| current page text area.east);
 \end{tikzpicture}
+\vspace{-0.4em}
 }
 
 %%%%%%%%%%%%%%%%%%%%
 % Experience items
 %%%%%%%%%%%%%%%%%%%%
-\newcommand{\experience}[4]{\noindent
+\newcommand{\experience}[4]{
 \begin{tikzpicture}[remember picture,inner sep=0,text depth=0.25em]
-    \node[] (role) {\textbf{#1} | #2};
+    \node[] (role) {\textbf{#1}, #2};
     \node[anchor=south east, subduedcolour] (period) at (role.south -| current page text area.east) {\footnotesize #3};
-\end{tikzpicture}\\
-\vspace{-1.2em}
+\end{tikzpicture}
 \begin{itemize}[topsep=0pt,itemsep=-0.3em]
-    {\small #4}
+    {\small #4 }
 \end{itemize}
 \vspace{0.9em}
 }
